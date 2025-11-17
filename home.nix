@@ -3,6 +3,10 @@
   home.username = "nixos";
   home.stateVersion = "25.05";
   
+  home.packages = with pkgs; [
+    texlive.combined.scheme-full
+    pandoc
+  ];
   # Zsh configuration
   programs.zsh = {
     enable = true;
