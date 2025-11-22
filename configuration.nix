@@ -28,6 +28,7 @@
     wget
     git
     gh
+    uv
   ];
 
   nixpkgs.system = "x86_64-linux";
