@@ -29,6 +29,7 @@
     git
     gh
     uv
+    unzip
   ];
 
   nixpkgs.system = "x86_64-linux";
