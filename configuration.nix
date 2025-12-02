@@ -30,6 +30,7 @@
     gh
     uv
     unzip
+    gcc
     cmake
   ];
 
