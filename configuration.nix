@@ -32,6 +32,7 @@
     unzip
     gcc
     cmake
+    gnumake
   ];
 
   nixpkgs.system = "x86_64-linux";
