@@ -33,6 +33,7 @@
     gcc
     cmake
     gnumake
+    llvm
   ];
 
   nixpkgs.system = "x86_64-linux";
