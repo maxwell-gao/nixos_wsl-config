@@ -30,6 +30,7 @@
     gh
     uv
     unzip
+    cmake
   ];
 
   nixpkgs.system = "x86_64-linux";
