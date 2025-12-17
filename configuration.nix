@@ -18,6 +18,10 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
   programs.zsh.enable = true;
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
   users.users.nixos = {
     shell = pkgs.zsh;
   };
@@ -35,6 +39,7 @@
     gnumake
     llvm
     llvmPackages.stdenv
+    direnv
   ];
 
   nixpkgs.system = "x86_64-linux";
