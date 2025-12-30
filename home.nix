@@ -10,6 +10,7 @@ in
   home.stateVersion = "25.05";
   
   home.packages = with pkgs; [
+    zed-editor
     texlive.combined.scheme-full
     pandoc
     gdk

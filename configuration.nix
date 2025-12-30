@@ -5,12 +5,11 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{input, config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
-    # include NixOS-WSL modules
-    <nixos-wsl/modules>
+    # NixOS-WSL modules are now imported via flake.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

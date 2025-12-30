@@ -5,17 +5,20 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
     # sops-nix.url = "github:Mic92/sops-nix";
     # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
-    { self,  nixpkgs, home-manager, ... }@inputs:
+    { self, nixpkgs, home-manager, nixos-wsl, ... }@inputs:
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           modules = [
             ./configuration.nix
+            nixos-wsl.nixosModules.default
             home-manager.nixosModules.home-manager
 	    {
             home-manager.useGlobalPkgs = true;
