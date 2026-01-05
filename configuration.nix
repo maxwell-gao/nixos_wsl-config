@@ -39,6 +39,7 @@
     llvm
     llvmPackages.stdenv
     direnv
+    lazygit
   ];
 
   nixpkgs.system = "x86_64-linux";
