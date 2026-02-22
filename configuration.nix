@@ -40,6 +40,8 @@
     llvmPackages.stdenv
     direnv
     lazygit
+    awscli2
+    ssm-session-manager-plugin
   ];
 
   nixpkgs.system = "x86_64-linux";
