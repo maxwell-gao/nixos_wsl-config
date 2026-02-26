@@ -42,6 +42,7 @@
     lazygit
     awscli2
     ssm-session-manager-plugin
+    bun
   ];
 
   nixpkgs.system = "x86_64-linux";
