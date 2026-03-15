@@ -39,10 +39,11 @@
     llvm
     llvmPackages.stdenv
     direnv
-    lazygit
-    awscli2
-    ssm-session-manager-plugin
-    bun
+    # Go development
+    go
+    gopls
+    gotools
+    delve
   ];
 
   nixpkgs.system = "x86_64-linux";
